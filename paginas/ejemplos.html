@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Buenas Prácticas en Maquetación</title>
+  <!-- Incluyendo Bulma CSS framework via CDN para estilos responsivos y componentes -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- Agregando FontAwesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navbar de Bulma para navegación -->
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../index.html">
+        <strong>Buenas Prácticas Web</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="../index.html">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a class="navbar-item" href="estructura.html">
+          <i class="fas fa-sitemap"></i> Estructura Semántica
+        </a>
+        <a class="navbar-item" href="jerarquia.html">
+          <i class="fas fa-list-ol"></i> Jerarquía de Contenido
+        </a>
+        <a class="navbar-item" href="ejemplos.html">
+          <i class="fas fa-code"></i> Ejemplos de Código
+        </a>
+        <a class="navbar-item" href="formulario.html">
+          <i class="fas fa-clipboard-list"></i> Formulario
+        </a>
+        <a class="navbar-item" href="tabla.html">
+          <i class="fas fa-table"></i> Tabla
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero section para el encabezado -->
+  <section class="hero is-info">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Ejemplos de Buenas Prácticas en Maquetación</h1>
+        <p class="subtitle">Ejemplos prácticos de código HTML5 semántico y accesible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenedor con sección -->
+  <div class="container">
+    <section class="section">
+      <!-- Card para el contenido principal -->
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            <h2>Ejemplos de Uso de Buenas Prácticas en Maquetación Web</h2>
+            <h3>Ejemplo 1: Estructura Básica de una Página Web</h3>
+            <p>
+              Usar etiquetas semánticas mejora la accesibilidad y el SEO de un sitio web. A continuación se muestra un
+              ejemplo de cómo organizar un contenido básico utilizando HTML5 de forma semántica.
+            </p>
+            <!-- Usando box de Bulma para el código -->
+            <div class="box">
+              <pre><code>
+&lt;header&gt;
+    &lt;h1&gt;Bienvenido a Mi Sitio Web&lt;/h1&gt;
+    &lt;p&gt;Este es un ejemplo de estructura semántica&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="inicio.html"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="sobre-nosotros.html"&gt;Sobre Nosotros&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;section&gt;
+    &lt;h2&gt;Sección de Introducción&lt;/h2&gt;
+    &lt;p&gt;Aquí puedes hablar sobre tu sitio web o negocio. Esto debería estar en un artículo o sección específica&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;&copy; 2025 Mi Sitio Web&lt;/p&gt;
+&lt;/footer&gt;
+              </code></pre>
+            </div>
+
+            <h3>Ejemplo 2: Uso de Artículos y Asides</h3>
+            <p>
+              El uso de la etiqueta <code>&lt;article&gt;</code> es ideal para contenido independiente como artículos o
+              publicaciones. También puedes usar <code>&lt;aside&gt;</code> para contenido relacionado pero no esencial.
+            </p>
+            <div class="box">
+              <pre><code>
+&lt;article&gt;
+    &lt;h2&gt;Artículo de Blog&lt;/h2&gt;
+    &lt;p&gt;Este es un ejemplo de un artículo de blog que puede ser compartido de forma independiente.&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;aside&gt;
+    &lt;h3&gt;Notas del Autor&lt;/h3&gt;
+    &lt;p&gt;Este es un contenido relacionado con el artículo pero no es esencial para la lectura principal.&lt;/p&gt;
+&lt;/aside&gt;
+              </code></pre>
+            </div>
+
+            <h3>Ejemplo 3: Lista de Contenidos</h3>
+            <p>
+              Una lista semántica ayuda a organizar el contenido de manera clara y accesible. Aquí un ejemplo de una lista
+              ordenada de pasos para una tarea.
+            </p>
+            <div class="box">
+              <pre><code>
+&lt;ol&gt;
+    &lt;li&gt;Paso 1: Investigar&lt;/li&gt;
+    &lt;li&gt;Paso 2: Planificar&lt;/li&gt;
+    &lt;li&gt;Paso 3: Ejecutar&lt;/li&gt;
+    &lt;li&gt;Paso 4: Evaluar&lt;/li&gt;
+&lt;/ol&gt;
+              </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>&copy; 2025 Buenas Prácticas Web. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script para navbar -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

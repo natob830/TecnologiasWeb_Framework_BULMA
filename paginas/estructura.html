@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructura Semántica en Maquetación Web</title>
+  <!-- Incluyendo Bulma CSS framework via CDN para estilos responsivos y componentes -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- Agregando FontAwesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navbar de Bulma para navegación -->
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../index.html">
+        <strong>Buenas Prácticas Web</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="../index.html">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a class="navbar-item" href="estructura.html">
+          <i class="fas fa-sitemap"></i> Estructura Semántica
+        </a>
+        <a class="navbar-item" href="jerarquia.html">
+          <i class="fas fa-list-ol"></i> Jerarquía de Contenido
+        </a>
+        <a class="navbar-item" href="ejemplos.html">
+          <i class="fas fa-code"></i> Ejemplos de Código
+        </a>
+        <a class="navbar-item" href="formulario.html">
+          <i class="fas fa-clipboard-list"></i> Formulario
+        </a>
+        <a class="navbar-item" href="tabla.html">
+          <i class="fas fa-table"></i> Tabla
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero section para el encabezado -->
+  <section class="hero is-info">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Estructura Semántica en HTML5</h1>
+        <p class="subtitle">La estructura semántica es fundamental para mejorar la accesibilidad y SEO de las páginas web.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenedor con columnas para layout -->
+  <div class="container">
+    <section class="section">
+      <!-- Card para el contenido principal -->
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            <h2>Beneficios de Usar una Estructura Semántica</h2>
+            <h3>¿Qué es la Estructura Semántica?</h3>
+            <p>
+              En HTML5, una estructura semántica hace uso de etiquetas que no solo afectan la presentación visual,
+              sino que también le dan un significado al contenido. Esto mejora la accesibilidad y permite que los motores
+              de búsqueda comprendan mejor la página.
+            </p>
+
+            <h3>Beneficios de la Estructura Semántica</h3>
+            <ul>
+              <li><i class="fas fa-check-circle has-text-success"></i> Mejora la accesibilidad para usuarios con discapacidad visual.</li>
+              <li><i class="fas fa-search has-text-info"></i> Optimiza la indexación y el SEO de la página.</li>
+              <li><i class="fas fa-code has-text-warning"></i> Hace que el código sea más limpio y comprensible.</li>
+            </ul>
+
+            <h3>Ejemplo de Código Semántico</h3>
+            <p>Un ejemplo de una página con una estructura semántica adecuada:</p>
+            <!-- Usando box de Bulma para el código -->
+            <div class="box">
+              <pre><code>
+&lt;header&gt;
+    &lt;h1&gt;Título de la Página&lt;/h1&gt;
+    &lt;p&gt;Descripción de la página&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;article&gt;
+    &lt;h2&gt;Artículo 1&lt;/h2&gt;
+    &lt;p&gt;Contenido del artículo&lt;/p&gt;
+&lt;/article&gt;
+              </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>&copy; 2025 Buenas Prácticas Web. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script para navbar -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

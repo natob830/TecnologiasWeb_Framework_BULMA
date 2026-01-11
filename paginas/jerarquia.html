@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jerarquía de Contenido en Maquetación Web</title>
+  <!-- Incluyendo Bulma CSS framework via CDN para estilos responsivos y componentes -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- Agregando FontAwesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navbar de Bulma para navegación -->
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../index.html">
+        <strong>Buenas Prácticas Web</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="../index.html">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a class="navbar-item" href="estructura.html">
+          <i class="fas fa-sitemap"></i> Estructura Semántica
+        </a>
+        <a class="navbar-item" href="jerarquia.html">
+          <i class="fas fa-list-ol"></i> Jerarquía de Contenido
+        </a>
+        <a class="navbar-item" href="ejemplos.html">
+          <i class="fas fa-code"></i> Ejemplos de Código
+        </a>
+        <a class="navbar-item" href="formulario.html">
+          <i class="fas fa-clipboard-list"></i> Formulario
+        </a>
+        <a class="navbar-item" href="tabla.html">
+          <i class="fas fa-table"></i> Tabla
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero section para el encabezado -->
+  <section class="hero is-info">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Jerarquía de Contenido</h1>
+        <p class="subtitle">La correcta jerarquización del contenido es clave para una maquetación web eficiente y accesible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenedor con sección -->
+  <div class="container">
+    <section class="section">
+      <!-- Card para el contenido principal -->
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            <h2>Importancia de la Jerarquía de Contenido</h2>
+            <h3>¿Qué es la Jerarquía de Contenido?</h3>
+            <p>
+              La jerarquía de contenido se refiere a cómo organizamos los elementos de una página de forma lógica, utilizando
+              encabezados para establecer una relación clara entre las secciones.
+            </p>
+
+            <h3>¿Por qué es importante?</h3>
+            <ul>
+              <li><i class="fas fa-book-open has-text-info"></i> Facilita la lectura y navegación del usuario.</li>
+              <li><i class="fas fa-search has-text-success"></i> Mejora el SEO, ya que los motores de búsqueda utilizan los encabezados para indexar el contenido.</li>
+              <li><i class="fas fa-sitemap has-text-warning"></i> Organiza el contenido de manera lógica y accesible.</li>
+            </ul>
+
+            <h3>Ejemplo de Jerarquía de Títulos</h3>
+            <p>El uso de títulos con una jerarquía clara es esencial:</p>
+            <!-- Usando box de Bulma para el código -->
+            <div class="box">
+              <pre><code>
+&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo del Tema Principal&lt;/h2&gt;
+&lt;h3&gt;Subtítulo del Subtema&lt;/h3&gt;
+              </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>&copy; 2025 Buenas Prácticas Web. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script para navbar -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buenas Prácticas en Maquetación Web</title>
+  <!-- Incluyendo Bulma CSS framework via CDN para estilos responsivos y componentes -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- Agregando FontAwesome para íconos, compatible con Bulma -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Usando navbar de Bulma para navegación responsive -->
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <strong>Buenas Prácticas Web</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a class="navbar-item" href="paginas/estructura.html">
+          <i class="fas fa-sitemap"></i> Estructura Semántica
+        </a>
+        <a class="navbar-item" href="paginas/jerarquia.html">
+          <i class="fas fa-list-ol"></i> Jerarquía de Contenido
+        </a>
+        <a class="navbar-item" href="paginas/ejemplos.html">
+          <i class="fas fa-code"></i> Ejemplos de Código
+        </a>
+        <a class="navbar-item" href="paginas/formulario.html">
+          <i class="fas fa-clipboard-list"></i> Formulario
+        </a>
+        <a class="navbar-item" href="paginas/tabla.html">
+          <i class="fas fa-table"></i> Tabla
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero section de Bulma para el encabezado principal -->
+  <section class="hero is-info">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Buenas Prácticas en Maquetación Web</h1>
+        <p class="subtitle">Aprende a estructurar correctamente tus páginas web utilizando HTML5 y Bulma.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenedor principal con columnas de Bulma para layout responsive -->
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters">
+        <section class="section">
+          <!-- Card de Bulma para el artículo principal -->
+          <div class="card">
+            <div class="card-content">
+              <div class="content">
+                <h2>¿Por qué es importante la maquetación web?</h2>
+                <p>
+                  Una buena maquetación es esencial para una web accesible y fácil de usar. Utilizar etiquetas semánticas mejora
+                  la estructura del contenido y facilita la indexación en motores de búsqueda, además de mejorar la accesibilidad
+                  para personas con discapacidad.
+                </p>
+
+                <h3>¿Qué son las etiquetas semánticas?</h3>
+                <p>
+                  Las etiquetas semánticas son aquellas que tienen un significado claro en el contexto de la web. Algunas de las
+                  más comunes incluyen: <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, y
+                  <code>&lt;nav&gt;</code>.
+                </p>
+
+                <h3>Ejemplo de una página bien estructurada</h3>
+                <p>A continuación se muestra un ejemplo de cómo organizar una página web con las mejores prácticas:</p>
+                <figure class="image is-4by3">
+                  <img src="imagenes/maquetacion.jpg" alt="Ejemplo de maquetación web">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="column">
+        <!-- Aside usando card de Bulma -->
+        <aside class="section">
+          <div class="card">
+            <div class="card-header">
+              <p class="card-header-title">
+                <i class="fas fa-lightbulb"></i> Tip adicional
+              </p>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <h3>Tip adicional sobre accesibilidad web</h3>
+                <p>
+                  Al utilizar etiquetas semánticas, asegúrate de añadir texto alternativo (<code>alt</code>) a las imágenes. Esto
+                  es fundamental para la accesibilidad y el SEO.
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer usando Bulma -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>&copy; 2025 Buenas Prácticas Web. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script para funcionalidad del navbar burger -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

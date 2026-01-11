@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Tabla - Buenas Prácticas en Maquetación Web</title>
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../index.html">
+        <strong>Buenas Prácticas Web</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="../index.html">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a class="navbar-item" href="estructura.html">
+          <i class="fas fa-sitemap"></i> Estructura Semántica
+        </a>
+        <a class="navbar-item" href="jerarquia.html">
+          <i class="fas fa-list-ol"></i> Jerarquía de Contenido
+        </a>
+        <a class="navbar-item" href="ejemplos.html">
+          <i class="fas fa-code"></i> Ejemplos de Código
+        </a>
+        <a class="navbar-item" href="formulario.html">
+          <i class="fas fa-clipboard-list"></i> Formulario
+        </a>
+        <a class="navbar-item" href="tabla.html">
+          <i class="fas fa-table"></i> Tabla
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero is-info">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Ejemplo de Tabla en Maquetación Web</h1>
+        <p class="subtitle">En esta página se muestra cómo organizar correctamente los datos utilizando una tabla en HTML5, siguiendo las buenas prácticas de maquetación web.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenedor -->
+  <div class="container">
+    <section class="section">
+      <!-- Card para el contenido -->
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            <h2>Ejemplo de Tabla: Buenas Prácticas</h2>
+            <h3>Buenas Prácticas al Usar Tablas en HTML5</h3>
+            <p>Las tablas son una herramienta útil para presentar datos en un formato organizado, pero deben usarse correctamente para asegurar la accesibilidad y la usabilidad de la página. Algunas buenas prácticas al usar tablas en HTML5 son:</p>
+            <ul>
+              <li><i class="fas fa-check has-text-success"></i> Usar siempre las etiquetas <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> y <code>&lt;tfoot&gt;</code> para estructurar adecuadamente la tabla.</li>
+              <li><i class="fas fa-check has-text-success"></i> Incluir encabezados con <code>&lt;th&gt;</code> para cada columna, lo que mejora la accesibilidad y la comprensión del contenido.</li>
+              <li><i class="fas fa-check has-text-success"></i> Usar atributos como <code>scope</code> en las etiquetas <code>&lt;th&gt;</code> para especificar si el encabezado corresponde a una fila, columna o grupo de celdas.</li>
+              <li><i class="fas fa-check has-text-success"></i> Asegurarse de que las tablas sean legibles y estén correctamente formateadas para facilitar la navegación en dispositivos móviles.</li>
+            </ul>
+
+            <h3>Ejemplo de una Tabla Bien Estructurada</h3>
+            <p>La siguiente tabla sigue las mejores prácticas de HTML5 y es un ejemplo de cómo presentar información de manera clara y accesible:</p>
+
+            <!-- Tabla usando clases de Bulma para estilo responsivo -->
+            <div class="table-container">
+              <table class="table is-striped is-hoverable is-fullwidth">
+                <thead>
+                  <tr>
+                    <th scope="col"><i class="fas fa-box"></i> Producto</th>
+                    <th scope="col"><i class="fas fa-info-circle"></i> Descripción</th>
+                    <th scope="col"><i class="fas fa-dollar-sign"></i> Precio</th>
+                    <th scope="col"><i class="fas fa-warehouse"></i> Disponibilidad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Monitor 24"</td>
+                    <td>Monitor de alta resolución de 24 pulgadas</td>
+                    <td>$200</td>
+                    <td><span class="tag is-success">En stock</span></td>
+                  </tr>
+                  <tr>
+                    <td>Teclado mecánico</td>
+                    <td>Teclado mecánico con retroiluminación RGB</td>
+                    <td>$80</td>
+                    <td><span class="tag is-danger">Agotado</span></td>
+                  </tr>
+                  <tr>
+                    <td>Mouse inalámbrico</td>
+                    <td>Mouse ergonómico y wireless</td>
+                    <td>$25</td>
+                    <td><span class="tag is-success">En stock</span></td>
+                  </tr>
+                  <tr>
+                    <td>Altavoces Bluetooth</td>
+                    <td>Altavoces inalámbricos con sonido estéreo</td>
+                    <td>$55</td>
+                    <td><span class="tag is-success">En stock</span></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="4" class="has-text-centered has-text-grey">Los precios son indicativos y pueden variar.</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>&copy; 2025 Buenas Prácticas Web. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script para navbar -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

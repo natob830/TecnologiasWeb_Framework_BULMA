@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Autoevaluación</title>
+  <!-- Incluyendo Bulma CSS framework -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- FontAwesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../index.html">
+        <strong>Buenas Prácticas Web</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="../index.html">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a class="navbar-item" href="estructura.html">
+          <i class="fas fa-sitemap"></i> Estructura Semántica
+        </a>
+        <a class="navbar-item" href="jerarquia.html">
+          <i class="fas fa-list-ol"></i> Jerarquía de Contenido
+        </a>
+        <a class="navbar-item" href="ejemplos.html">
+          <i class="fas fa-code"></i> Ejemplos de Código
+        </a>
+        <a class="navbar-item" href="formulario.html">
+          <i class="fas fa-clipboard-list"></i> Formulario
+        </a>
+        <a class="navbar-item" href="tabla.html">
+          <i class="fas fa-table"></i> Tabla
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero is-info">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Formulario de Autoevaluación</h1>
+        <p class="subtitle">Responde las preguntas sobre las buenas prácticas en maquetación web.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenedor -->
+  <div class="container">
+    <section class="section">
+      <!-- Card para el formulario -->
+      <div class="card">
+        <div class="card-header">
+          <p class="card-header-title">
+            <i class="fas fa-question-circle"></i> Responde las siguientes preguntas
+          </p>
+        </div>
+        <div class="card-content">
+          <form id="evaluationForm">
+            <!-- Campo 1: Usando field y control de Bulma -->
+            <div class="field">
+              <label class="label" for="q1">¿Qué etiqueta se usa para el encabezado principal?</label>
+              <div class="control has-icons-left">
+                <input class="input" type="text" id="q1" name="q1" placeholder="Ej: header" required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-tag"></i>
+                </span>
+              </div>
+              <p class="help">Campo obligatorio</p>
+            </div>
+
+            <!-- Campo 2 -->
+            <div class="field">
+              <label class="label" for="q2">¿Qué etiqueta se usa para la navegación?</label>
+              <div class="control has-icons-left">
+                <input class="input" type="text" id="q2" name="q2" placeholder="Ej: nav" required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-compass"></i>
+                </span>
+              </div>
+              <p class="help">Campo obligatorio</p>
+            </div>
+
+            <!-- Campo 3: Textarea -->
+            <div class="field">
+              <label class="label" for="q3">¿Por qué es importante la jerarquía de contenido?</label>
+              <div class="control">
+                <textarea class="textarea" id="q3" name="q3" placeholder="Explica la importancia..." rows="4" required></textarea>
+              </div>
+              <p class="help">Campo obligatorio</p>
+            </div>
+
+            <!-- Campo 4 -->
+            <div class="field">
+              <label class="label" for="q4">¿Qué etiqueta se usa para un artículo independiente?</label>
+              <div class="control has-icons-left">
+                <input class="input" type="text" id="q4" name="q4" placeholder="Ej: article" required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-newspaper"></i>
+                </span>
+              </div>
+              <p class="help">Campo obligatorio</p>
+            </div>
+
+            <!-- Campo 5 -->
+            <div class="field">
+              <label class="label" for="q5">¿Qué significa la etiqueta &lt;aside&gt;?</label>
+              <div class="control has-icons-left">
+                <input class="input" type="text" id="q5" name="q5" placeholder="Ej: Contenido relacionado" required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-info-circle"></i>
+                </span>
+              </div>
+              <p class="help">Campo obligatorio</p>
+            </div>
+
+            <!-- Campo 6 -->
+            <div class="field">
+              <label class="label" for="q6">¿Por qué usar listas semánticas es importante para el SEO?</label>
+              <div class="control">
+                <textarea class="textarea" id="q6" name="q6" placeholder="Explica la relación con SEO..." rows="4" required></textarea>
+              </div>
+              <p class="help">Campo obligatorio</p>
+            </div>
+
+            <!-- Campo 7 -->
+            <div class="field">
+              <label class="label" for="q7">¿Cómo mejora la accesibilidad el uso de etiquetas semánticas?</label>
+              <div class="control">
+                <textarea class="textarea" id="q7" name="q7" placeholder="Describe las mejoras..." rows="4" required></textarea>
+              </div>
+              <p class="help">Campo obligatorio</p>
+            </div>
+
+            <!-- Botón de envío con clases de Bulma -->
+            <div class="field">
+              <div class="control">
+                <button class="button is-primary" type="submit">
+                  <i class="fas fa-paper-plane"></i> Enviar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Notificación para feedback, inicialmente oculta -->
+      <div id="notification" class="notification is-success is-hidden">
+        <button class="delete"></button>
+        ¡Formulario enviado correctamente! Revisa tus respuestas.
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>&copy; 2025 Buenas Prácticas Web. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Funcionalidad del navbar
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+
+      // Validación visual del formulario
+      const form = document.getElementById('evaluationForm');
+      const notification = document.getElementById('notification');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Simular envío y mostrar notificación
+        notification.classList.remove('is-hidden');
+        // Scroll to notification
+        notification.scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // Cerrar notificación
+      document.querySelector('.delete').addEventListener('click', () => {
+        notification.classList.add('is-hidden');
+      });
+    });
+  </script>
+</body>
+
+</html>
